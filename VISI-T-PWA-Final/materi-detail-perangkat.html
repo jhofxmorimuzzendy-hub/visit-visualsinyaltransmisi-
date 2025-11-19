@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Materi | Perangkat & Pengkabelan | VISI-T</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1A73E8">
+  <link rel="icon" type="image/png" href="images/logo-visi-t.png"> 
+  
+  <style>
+    /* CSS DASAR (Konsisten) */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #f9f9f9; color: #333; overflow-x: hidden; }
+
+    /* HEADER (Fixed) */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 40px; background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed; width: 100%; z-index: 1000;
+    }
+    .logo img { height: 70px; width: auto; }
+
+    /* NAVIGASI BERBENTUK TOMBOL POLOS (PILL SHAPE) */
+    .nav-links {
+        display: flex; 
+        align-items: center;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #fff; 
+        background-color: #1A73E8; /* POLOS */
+        font-weight: 600;
+        padding: 8px 16px; 
+        margin-left: 15px;
+        border-radius: 50px; /* BENTUK PILL */
+        box-shadow: none; 
+        transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+        background-color: #0056b3; 
+        box-shadow: none;
+        transform: translateY(-2px);
+    }
+    /* CSS KHUSUS UNTUK MENYEMBUNYIKAN TOMBOL AKTIF */
+    .nav-links a.hidden {
+        display: none;
+    }
+
+    /* CONTAINER UTAMA - Padding untuk jarak dari header */
+    .container {
+      padding: 120px 40px 40px; 
+      max-width: 900px; /* Lebar konten sedikit dikecilkan untuk fokus bacaan */
+      margin: 0 auto;
+    }
+    
+    /* GAYA KHUSUS HALAMAN DETAIL MATERI */
+    .content-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+        color: #1A73E8;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+    h2 {
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    ul {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        list-style: disc;
+        color: #555;
+    }
+    /* GAYA TOMBOL KEMBALI DI DALAM KONTEN */
+    .back-to-materi {
+        display: inline-block;
+        margin-bottom: 25px;
+        text-decoration: none;
+        color: #0056b3;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .back-to-materi:hover {
+        color: #1A73E8;
+        text-decoration: underline;
+    }
+    /* GAYA TABLE */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo-visi-t.png" alt="VISI-T Logo">
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Peta Tower</a>
+        <a href="materi.html" class="hidden">Materi</a>
+        <a href="download.html">Download</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="materi.html" class="back-to-materi">
+        &larr; Kembali ke Daftar Materi
+    </a>
+
+    <div class="content-card">
+        <h1>Perangkat Transmisi & Pengkabelan Jaringan</h1>
+        
+        <p>Transmisi sinyal televisi membutuhkan sejumlah perangkat keras spesifik dan media transmisi yang andal.</p>
+
+        <h2>1. Perangkat Kunci dalam Alur Sinyal</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Perangkat</th>
+                    <th>Singkatan</th>
+                    <th>Fungsi Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Integrated Receiver Decoder**</td>
+                    <td>**IRD**</td>
+                    <td>Perangkat penerima yang digunakan untuk menangkap sinyal yang ditransmisikan oleh satelit dan mengubahnya kembali menjadi sinyal video dan audio yang siap diolah lebih lanjut.</td>
+                </tr>
+                <tr>
+                    <td>**Multiplexer**</td>
+                    <td>**MUX**</td>
+                    <td>Rangkaian yang berfungsi untuk menggabungkan beberapa jalur input (misalnya beberapa saluran TVRI seperti Nasional, Sport, dll.) menjadi satu jalur output sinyal digital yang efisien.</td>
+                </tr>
+                <tr>
+                    <td>**Encoder**</td>
+                    <td>-</td>
+                    <td>Perangkat **Uplink** yang bertugas mengubah sinyal *baseband* (audio/video) analog menjadi sinyal digital terkompresi sebelum dimodulasi dan dikirim ke satelit.</td>
+                </tr>
+                <tr>
+                    <td>**Serial Digital Interface Router**</td>
+                    <td>**SDI Router**</td>
+                    <td>Alat yang memungkinkan pemindahan atau pengalihan saluran masukan sinyal digital untuk menjaga ketersediaan jalur jika terjadi masalah (*backup*).</td>
+                </tr>
+                <tr>
+                    <td>**Frequency Pick Up**</td>
+                    <td>**FPU**</td>
+                    <td>Perangkat yang digunakan untuk mengirim program dari satu daerah ke daerah lain menggunakan gelombang mikro (transmisi SHF) dan modulasi FM, sering digunakan untuk siaran langsung atau *backup*.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Jenis-Jenis Kabel Jaringan dan Pengkabelan</h2>
+        <p>Transmisi sinyal di dalam studio atau antara perangkat bisa menggunakan media kabel (fisik) atau nirkabel (udara).</p>
+        <ul>
+            <li>**Kabel Koaksial (*Coaxial Cable*):** Media yang umum digunakan untuk membawa sinyal video dan sinyal frekuensi radio (RF) karena memiliki perisai yang baik terhadap interferensi. Digunakan untuk jarak dekat, misalnya dari MCR ke pemancar dalam satu komplek.</li>
+            <li>**Serat Optik (*Fiber Optic*):** Menyalurkan informasi sebagai sinyal analog (sinar laser/InfraRed) dan menawarkan *bandwidth* serta kecepatan yang sangat tinggi untuk jarak jauh.</li>
+        </ul>
+
+        <h3>Kabel LAN (UTP)</h3>
+        <p>Kabel **Unshielded Twisted Pair (UTP)** umumnya digunakan untuk jaringan komputer yang terintegrasi di studio. Terdapat 8 kawat di dalamnya yang dipilin.</p>
+        <ul>
+            <li>**Kategori:** Kabel UTP diklasifikasikan (misalnya CAT5, CAT6, CAT7) berdasarkan kecepatan dan frekuensi maksimum yang didukung. Misalnya, **CAT6** dapat mendukung kecepatan hingga 10 Gbps.</li>
+            <li>**Jenis Susunan:**
+                <ul>
+                    <li>**Kabel Straight:** Urutan warna pada kedua ujung kabel **sama** (biasanya T568B), digunakan untuk menghubungkan perangkat **berbeda** (misalnya komputer ke *switch*).</li>
+                    <li>**Kabel Cross:** Urutan warna pada ujung pertama **berbeda** dengan ujung kedua (misalnya T568A dan T568B), digunakan untuk menghubungkan perangkat **sejenis** (misalnya *switch* ke *switch*).</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4>Skema Warna Kabel Straight (T568B)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Warna Kabel</th>
+                    <th>Fungsi Utama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Putih-Oranye & Oranye</td>
+                    <td>Mengirim paket data</td>
+                </tr>
+                <tr>
+                    <td>Putih-Hijau & Hijau</td>
+                    <td>Mengirim paket data</td>
+                </tr>
+                <tr>
+                    <td>Biru & Putih-Biru</td>
+                    <td>Mengirim paket suara</td>
+                </tr>
+                <tr>
+                    <td>Cokelat & Putih-Cokelat</td>
+                    <td>Mengirim tegangan DC</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  </main>
+
+</body>
+</html>

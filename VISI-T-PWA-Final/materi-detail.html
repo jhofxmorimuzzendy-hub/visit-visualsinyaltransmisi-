@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Materi | VISI-T</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1A73E8">
+  <link rel="icon" type="image/png" href="images/logo-visi-t.png"> 
+  
+  <style>
+    /* CSS DASAR (Konsisten) */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #f9f9f9; color: #333; overflow-x: hidden; }
+
+    /* HEADER (Fixed) */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 40px; background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed; width: 100%; z-index: 1000;
+    }
+    .logo img { height: 70px; width: auto; }
+
+    /* NAVIGASI BERBENTUK TOMBOL POLOS (PILL SHAPE) */
+    .nav-links {
+        display: flex; 
+        align-items: center;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #fff; 
+        background-color: #1A73E8; /* POLOS */
+        font-weight: 600;
+        padding: 8px 16px; 
+        margin-left: 15px;
+        border-radius: 50px; /* BENTUK PILL */
+        box-shadow: none; 
+        transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+        background-color: #0056b3; 
+        box-shadow: none;
+        transform: translateY(-2px);
+    }
+    /* CSS KHUSUS UNTUK MENYEMBUNYIKAN TOMBOL AKTIF */
+    .nav-links a.hidden {
+        display: none;
+    }
+
+    /* CONTAINER UTAMA - Padding untuk jarak dari header */
+    .container {
+      padding: 120px 40px 40px; 
+      max-width: 900px; /* Lebar konten sedikit dikecilkan untuk fokus bacaan */
+      margin: 0 auto;
+    }
+    
+    /* GAYA KHUSUS HALAMAN DETAIL MATERI */
+    .content-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+        color: #1A73E8;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+    h2 {
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    ul {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        list-style: disc;
+        color: #555;
+    }
+    /* GAYA TOMBOL KEMBALI DI DALAM KONTEN */
+    .back-to-materi {
+        display: inline-block;
+        margin-bottom: 25px;
+        text-decoration: none;
+        color: #0056b3;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .back-to-materi:hover {
+        color: #1A73E8;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo-visi-t.png" alt="VISI-T Logo">
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Peta Tower</a>
+        <a href="materi.html" class="hidden">Materi</a>
+        <a href="download.html">Download</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="materi.html" class="back-to-materi">
+        &larr; Kembali ke Daftar Materi
+    </a>
+
+    <div class="content-card">
+        <h1>Dasar-Dasar Sinyal dan Frekuensi</h1>
+        
+        <p>Sinyal adalah representasi informasi yang ditransmisikan dari satu titik ke titik lain. Dalam konteks sistem transmisi, pemahaman dasar mengenai karakteristik sinyal dan spektrum frekuensi adalah krusial untuk memastikan komunikasi yang efisien dan stabil.</p>
+
+        <h2>1. Jenis-Jenis Sinyal</h2>
+        <p>Secara umum, sinyal dapat dibagi menjadi dua kategori utama, yaitu sinyal analog dan sinyal digital. Sistem komunikasi modern sering kali menggabungkan keduanya, memanfaatkan keunggulan masing-masing.</p>
+        <ul>
+            <li>**Sinyal Analog:** Berupa gelombang kontinyu yang mereplikasi data secara langsung (misalnya suara).</li>
+            <li>**Sinyal Digital:** Berupa deretan nilai diskrit (0 dan 1) yang merepresentasikan data. Lebih tahan terhadap noise.</li>
+        </ul>
+
+        <h2>2. Spektrum Frekuensi</h2>
+        <p>Setiap komunikasi nirkabel beroperasi pada rentang frekuensi tertentu. Alokasi frekuensi ini diatur secara ketat untuk mencegah interferensi antar layanan. Dalam proyek VISI-T, kita fokus pada spektrum Microwave (GHz) yang digunakan untuk komunikasi *point-to-point* antar tower.</p>
+
+        <h2>3. Modulasi</h2>
+        <p>Modulasi adalah proses encoding informasi ke dalam gelombang pembawa (carrier wave). Beberapa teknik modulasi yang umum digunakan mencakup Amplitude Modulation (AM) dan Frequency Modulation (FM), yang masing-masing memiliki kelebihan dalam hal bandwidth dan ketahanan noise.</p>
+    </div>
+
+  </main>
+
+</body>
+</html>

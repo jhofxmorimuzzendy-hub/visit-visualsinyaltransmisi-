@@ -1,0 +1,37 @@
+{
+  "Jayapura": {
+    "location": "Kota Jayapura, Papua",
+    "detail": "Tower utama di wilayah utara Papua. Menjadi pusat transmisi utama TVRI Papua untuk wilayah Jayapura dan sekitarnya.",
+    "image": "img/tower-jayapura.jpg"
+  },
+  "Biak": {
+    "location": "Kabupaten Biak Numfor",
+    "detail": "Menjangkau area Biak dan Supiori, dengan sistem transmisi mikro gelombang menuju pusat siaran.",
+    "image": "img/tower-biak.jpg"
+  },
+  "Serui": {
+    "location": "Kabupaten Kepulauan Yapen",
+    "detail": "Menyalurkan siaran melalui pemancar UHF lokal yang terkoneksi dengan sistem satelit Palapa D.",
+    "image": "img/tower-serui.jpg"
+  },
+  "Nabire": {
+    "location": "Kabupaten Nabire",
+    "detail": "Memiliki peran penting untuk daerah tengah Papua sebagai relay point antar wilayah.",
+    "image": "img/tower-nabire.jpg"
+  },
+  "Tanah Merah": {
+    "location": "Kabupaten Boven Digoel",
+    "detail": "Pemancar di wilayah selatan Papua dengan cakupan siaran hingga perbatasan selatan.",
+    "image": "img/tower-tanahmerah.jpg"
+  },
+  "Merauke": {
+    "location": "Kabupaten Merauke",
+    "detail": "Menjadi stasiun transmisi paling timur Indonesia, dengan konektivitas utama fiber dan VSAT.",
+    "image": "img/tower-merauke.jpg"
+  },
+  "Fak-Fak": {
+    "location": "Kabupaten Fakfak",
+    "detail": "Salah satu site historis TVRI Papua Barat, dengan cakupan wilayah barat daya pulau.",
+    "image": "img/tower-fakfak.jpg"
+  }
+}

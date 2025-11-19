@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Materi | Alur Sinyal TVRI | VISI-T</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1A73E8">
+  <link rel="icon" type="image/png" href="images/logo-visi-t.png"> 
+  
+  <style>
+    /* CSS DASAR (Konsisten) */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #f9f9f9; color: #333; overflow-x: hidden; }
+
+    /* HEADER (Fixed) */
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 40px; background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed; width: 100%; z-index: 1000;
+    }
+    .logo img { height: 70px; width: auto; }
+
+    /* NAVIGASI BERBENTUK TOMBOL POLOS (PILL SHAPE) */
+    .nav-links {
+        display: flex; 
+        align-items: center;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #fff; 
+        background-color: #1A73E8; /* POLOS */
+        font-weight: 600;
+        padding: 8px 16px; 
+        margin-left: 15px;
+        border-radius: 50px; /* BENTUK PILL */
+        box-shadow: none; 
+        transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+        background-color: #0056b3; 
+        box-shadow: none;
+        transform: translateY(-2px);
+    }
+    /* CSS KHUSUS UNTUK MENYEMBUNYIKAN TOMBOL AKTIF */
+    .nav-links a.hidden {
+        display: none;
+    }
+
+    /* CONTAINER UTAMA - Padding untuk jarak dari header */
+    .container {
+      padding: 120px 40px 40px; 
+      max-width: 900px; /* Lebar konten sedikit dikecilkan untuk fokus bacaan */
+      margin: 0 auto;
+    }
+    
+    /* GAYA KHUSUS HALAMAN DETAIL MATERI */
+    .content-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+        color: #1A73E8;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+    h2 {
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    ul {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        list-style: disc;
+        color: #555;
+    }
+    /* GAYA TOMBOL KEMBALI DI DALAM KONTEN */
+    .back-to-materi {
+        display: inline-block;
+        margin-bottom: 25px;
+        text-decoration: none;
+        color: #0056b3;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .back-to-materi:hover {
+        color: #1A73E8;
+        text-decoration: underline;
+    }
+    .image-placeholder {
+        text-align: center;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px dashed #ccc;
+        background: #f0f8ff;
+        color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo-visi-t.png" alt="VISI-T Logo">
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Peta Tower</a>
+        <a href="materi.html" class="hidden">Materi</a>
+        <a href="download.html">Download</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="materi.html" class="back-to-materi">
+        &larr; Kembali ke Daftar Materi
+    </a>
+
+    <div class="content-card">
+        <h1>Alur Sinyal Transmisi TVRI</h1>
+        
+        <p>Sinyal siaran televisi adalah hasil integrasi kompleks dari banyak tahapan, mulai dari produksi hingga distribusi. Khususnya pada TVRI Nasional, proses transmisinya banyak memanfaatkan sistem komunikasi satelit untuk menjangkau seluruh wilayah Indonesia.</p>
+        
+        <div class="image-placeholder">
+            
+        </div>
+
+        <h2>1. Produksi dan Master Control Room (MCR)</h2>
+        <p>Program siaran diproduksi di **Studio** (menggunakan kamera, audio mixer, dll.) dan kemudian dikirim ke **Master Control Room (MCR)**.</p>
+        <ul>
+            <li>**MCR:** Berfungsi sebagai pusat kendali utama yang mengatur dan memantau seluruh alur sinyal audio dan video siaran, serta membagi sinyal input ke bagian-bagian lain seperti ruang transfer atau pemancar.</li>
+        </ul>
+
+        <h2>2. Proses Uplink (Ke Satelit)</h2>
+        <p>Dari MCR, sinyal siaran dipersiapkan untuk dikirim ke satelit.</p>
+        <ul>
+            <li>**Encoder:** Menerima sinyal video dan audio, lalu mengubah sinyal analog menjadi sinyal digital (jika masih analog) dengan format seperti **MPEG-2**.</li>
+            <li>**Modulasi:** Sinyal digital dimodulasi (misalnya menggunakan **QPSK** atau **DVB-S2**) untuk menumpangkan informasi ke gelombang pembawa (*carrier wave*).</li>
+            <li>**Up Converter:** Mengubah sinyal frekuensi menengah (IF) menjadi sinyal frekuensi radio (RF) yang lebih tinggi (misalnya frekuensi **Uplink TVRI Palapa D** adalah $6263.5 \text{ MHz}$).</li>
+            <li>**SSPA (Solid State Power Amplifier):** Menguatkan sinyal RF.</li>
+            <li>**Antena Parabola (Uplink):** Memancarkan sinyal yang sudah dikuatkan menuju ke Satelit (misalnya **Satelit Palapa D** atau **Telkom 3s** yang digunakan TVRI).</li>
+        </ul>
+
+        <h2>3. Transponder Satelit</h2>
+        <p>Satelit, melalui **transponder**, akan menerima sinyal dari stasiun bumi (uplink) dan memancarkannya kembali ke bumi pada frekuensi yang berbeda (downlink). Perbedaan frekuensi ini penting untuk menghindari interferensi.</p>
+
+        <h2>4. Proses Downlink (Ke Stasiun Relay/Pemancar Daerah)</h2>
+        <p>Sinyal diterima oleh stasiun pemancar TVRI di daerah-daerah atau stasiun *relay* di seluruh Indonesia.</p>
+        <ul>
+            <li>**Antena Parabola (Downlink):** Menerima sinyal dari satelit.</li>
+            <li>**IRD (Integrated Receiver Decoder):** Menerima sinyal termodulasi dari satelit dan mengonversinya kembali menjadi sinyal video dan audio yang dapat diolah.</li>
+            <li>**Pemancar (Transmitter):** Sinyal video dan audio dimodulasi lagi (misalnya **AM** untuk video dan **FM** untuk audio pada siaran analog) dan dikuatkan untuk disiarkan secara terestrial melalui antena pemancar. TVRI sedang dalam proses modernisasi ke pemancar digital.</li>
+        </ul>
+
+        <h2>5. Penerimaan Pemirsa</h2>
+        <p>Antena penerima (*RX*) di rumah pemirsa (misalnya **antena Yagi**) menangkap gelombang elektromagnetik dan mengubahnya kembali menjadi sinyal listrik yang kemudian diubah oleh televisi menjadi objek gambar dan suara.</p>
+    </div>
+
+  </main>
+
+</body>
+</html>
